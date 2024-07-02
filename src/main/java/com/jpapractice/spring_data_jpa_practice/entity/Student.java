@@ -29,7 +29,7 @@ public class Student {
             nullable = false
     )
     private String emailId;
-    private String gurdianName;
-    private String gurdianEmail;
-    private String gurdianPhone;
+
+    @Embedded
+    private Gurdian gurdian;
 }
