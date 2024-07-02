@@ -40,9 +40,9 @@ class StudentRepositoryTest {
 
 
         Student student = Student.builder()
-                .firstName("Shivam")
-                .emailId("shivam@gmail.com")
-                .lastName("Kumar")
+                .firstName("Shabbir")
+                .emailId("shabbir@gmail.com")
+                .lastName("Dawoodi")
                 .gurdian(gurdian)
                 .build();
 
@@ -61,6 +61,35 @@ class StudentRepositoryTest {
     public void findStudentByFirstName(){
         List<Student> studentList = studentRepository.findByFirstName("Shabbir");
         System.out.println("student list :" + studentList);
+    }
+
+    @Test
+    public  void printgetStudentByEmailAddress(){
+        Student student = studentRepository.getStudentByEmailAddress("shabbir@gmail.com");
+        System.out.println(student);
+    }
+
+    @Test
+    public void printgetStudentFirstNameByEmailAddress(){
+        String firstName = studentRepository.getStudentFirstNameByEmailAddress("shabbir@gmail.com");
+        System.out.println("firstName :" + firstName);
+    }
+
+    @Test
+    public  void printgetStudentByEmailAddressNative(){
+        Student student = studentRepository.getStudentByEmailAddressNative("shabbir@gmail.com");
+        System.out.println(student);
+    }
+
+    @Test
+    public  void printgetStudentByEmailAddressNativeNamedParam(){
+        Student student = studentRepository.getStudentByEmailAddressNativeNamedParam("shabbir@gmail.com");
+        System.out.println(student);
+    }
+
+    @Test
+    public void updateStudentNameByEmailAddress(){
+        studentRepository.updateStudentNameByEmailId("shabbir dawoodi", "shabbir@gmail.com");
     }
 
 
