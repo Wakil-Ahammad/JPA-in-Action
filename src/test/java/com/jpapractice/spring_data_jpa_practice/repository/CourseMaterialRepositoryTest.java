@@ -20,13 +20,13 @@ class CourseMaterialRepositoryTest {
 
          Course course =
                  Course.builder()
-                         .title("DSA")
-                         .credit(6)
+                         .title("BXB")
+                         .credit(10)
                          .build();
 
          CourseMaterial courseMaterial =
          CourseMaterial.builder()
-                 .url("www.google.com")
+                 .url("www.bxb.com")
                  .course(course)
                  .build();
 
